@@ -1,0 +1,222 @@
+h1{
+    position: absolute;
+    width: 552px;
+    height: 27px;
+    left: 444px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    }
+    
+    h3{
+    position: absolute;
+    width: 198px;
+    height: 27px;
+    left: 621px;
+    top: 68px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    }
+    
+    form{
+    position: absolute;
+    width: 402px;
+    height: 73px;
+    left: 619px;
+    top: 141px;
+    
+    }
+    #box1{
+        position: absolute;
+    width: 250px;
+    height: 45px;
+    right: 47%;
+    top: 0px;
+    border: none;
+    background: #E7E7E7;
+    border-radius: 10px;
+    }
+    
+    
+        #box2{
+            position: absolute;
+        width: 250px;
+        height: 45px;
+        right: 47%;
+        top: 60px;
+        border: none;
+        background: #E7E7E7;
+        border-radius: 10px;
+        }
+
+        #box4{
+            position: absolute;
+        width: 250px;
+        height: 45px;
+        right: 47%;
+        top: 120px;
+        border: none;
+        background: #E7E7E7;
+        border-radius: 10px;
+        }
+
+        #box5{
+            position: absolute;
+        width: 250px;
+        height: 45px;
+        right: 47%;
+        top: 180px;
+        border: none;
+        background: #E7E7E7;
+        border-radius: 10px;
+        }
+    
+        #box3{
+        position: absolute;
+        width: 90px;
+        height: 45px;
+        right: 88%;
+        top: 240px;
+        border: none;
+        background: #00203F;
+        border-radius: 10px;
+        color: white;
+        }
+
+        #box6{
+            position: absolute;
+            width: 90px;
+            height: 45px;
+            right: 47%;
+            top: 240px;
+            border: none;
+            background:#E7E7E7;
+            border-radius: 10px;
+            color: black;
+            }
+
+       
+        
+    
+        #signIn{
+            position: absolute;
+            width: 198px;
+            height: 27px;
+            left: 675px;
+            top: 68px;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px; 
+        }
+
+        #update{
+            position: absolute;
+            width: 198px;
+            height: 27px;
+            left: 630px;
+            top: 68px;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px; 
+        }
+
+        #Admin{
+            position: absolute;
+            width: 198px;
+            height: 27px;
+            left: 538px;
+            top: 68px;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px; 
+        }
+
+        #adminBox1{
+            position: absolute;
+            width: 100px;
+            height: 45px;
+            top: 150px;
+            border: none;
+            background: #00203F;
+            border-radius: 10px;
+            color: white;
+        }
+    #adminBox2{
+        position: absolute;
+        width: 100px;
+        height: 45px;
+        right: 50%;
+        top: 150px;
+        border: none;
+        background: #00203F;
+        border-radius: 10px;
+        color: white;
+    }
+
+    #adminBox3{
+        position: absolute;
+        width: 100px;
+        height: 45px;
+        right: 10px;
+        top: 150px;
+        border: none;
+        background: #00203F;
+        border-radius: 10px;
+        color: white;
+    }
+
+#userBox1{
+    position: absolute;
+            width: 100px;
+            height: 45px;
+            top: 20px;
+            border: none;
+            background: #00203F;
+            border-radius: 10px;
+            color: white;
+            left: 90%;
+}
+
+.index{
+    position: absolute;
+    width: 552px;
+    height: 27px;
+    left: 30px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+#User{
+    position: absolute;
+    width: 400px;
+    left: 550px;
+    height: 27px;
+    top: 68px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+table{
+position: absolute;
+height: 45px;
+left: 400px;
+top: 169px;
+width: 40%;
+}
+
+
+th{
+    background-color: #00203F;
+    color: white;
+}
+td{
+    text-align: center;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
