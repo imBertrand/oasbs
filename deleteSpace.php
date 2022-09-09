@@ -16,8 +16,8 @@
     <h3 id="delete">Delete Space</h3>
     <form action="major.php" method="post">
         <input type="text" placeholder="Space Id" name="spaceId" id="box1"><br>
-        <input type="submit" value="Save" name="addSpace" id="box3">
-        <input type="submit" value="Cancel" id="box6">
+        <input type="submit" value="Save" name="delete" id="box3">
+        <input type="submit" value="Cancel" nam id="box6">
     </form>
 </body>
 

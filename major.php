@@ -4,7 +4,7 @@
  	
 	//Support Functions
 	//----------------------------------
-	function checkLogin()
+	function loginCheck()
 	{
 		if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     		header("location: signin.php");
@@ -114,38 +114,31 @@
 	}
 
 
-if (isset($_POST['borrow'])) {
-            checkLogin();
-            //Check the user *** Buggy
-           
-             function getBookTitle($conn, $sql1, $parameters)
-				{
-				    $q = $conn->prepare($sql1);
-				    $q->execute($parameters);
-				    return $q->fetchColumn();
+if (isset($_GET['spaceId'])) {
+            loginCheck();
 
-				}
-            if(isset($_POST['checkbox'])){
-            	$username=$_SESSION['username'];
-            $checked = $_POST['checkbox'];
-            for($i=0; $i < count($checked); $i++){
-            	$sql1 = " SELECT title FROM Publisher WHERE pId = ? ";
 
-            	
+           $sql = "SELECT * from spaces where spaceId=? ";
+			$result=$conn->prepare($sql);
+			$result->execute([$_GET['spaceId']]);
 
-                $id = $checked[$i];
+        while ($item=$result->fetch(PDO::FETCH_ASSOC)){
+        	$region = $item['region'];
+        	$city = $item['city'];
+        	$location = $item['location'];
+        }
 
-				$title=getBookTitle($conn,$sql1,[$id]);
-			$sql2 = " INSERT INTO borrows VALUES (id,current_timestamp(), '$title', '$username' )";
+
+			$sql2 = " INSERT INTO report VALUES (reportNo,?,?,? )";
                 $query = $conn->prepare($sql2);
-                $query->execute();
+                $query->execute([$region,$city,$location]);
                 
                 if ($query==true) {
-                    echo "<script>alert('Book(s) Borrowed')</script>";
-                }
-            }
+                    echo "<script>alert('Space Booked')</script>";
+                
+            
             }else{
-            	echo "<script>alert('Please select what to borrow')</script>
+            	echo "<script>alert('Please select space to')</script>
             	<script>window.location='index.php'</script>";
             }
             echo "<script>window.location = 'index.php'</script>";
@@ -153,16 +146,9 @@ if (isset($_POST['borrow'])) {
         
 }
 
-	if (isset($_POST['delete'])) {
-		echo "Delete Working1";
-	}
-
-	if (isset($_POST['search'])) {
-		echo "Search Working1";
-	}
 
 	if (isset($_POST['addSpace'])) {
-    global $conn;
+   if($_POST['spaceId'] != "" || $_POST['region'] != ""|| $_POST['city'] != ""|| $_POST['location'] != ""){
     $sql = "INSERT INTO spaces values(?,?,?,?) ";
     $result=$conn->prepare($sql); 
     $result->execute([$_POST['spaceId'],$_POST['region'],$_POST['city'],$_POST['location']]); 
@@ -177,5 +163,33 @@ window.location = 'admin.php'
 </script>
 ";
         }
+    }else{
+    	 echo "
+<script>
+alert('Space Please Enter all details')
+</script>
+<script>
+window.location = 'addSpace.php'
+</script>
+";
     }
+}
+
+if (isset($_POST['delete'])) {
+                $query = $conn->prepare("DELETE from spaces WHERE spaceId=?");
+                $query->execute([$_POST['spaceId']]);
+
+                if ($query==true) {
+                    echo "
+<script>
+alert('Space Deleted')
+</script>
+<script>
+window.location = 'admin.php'
+</script>
+";
+                }
+            }
+
+ 
 ?>
