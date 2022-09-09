@@ -19,8 +19,8 @@
         <input type="text" placeholder="Region" name="region" id="box2"><br>
         <input type="text" placeholder="City" name="city" id="box4"><br>
         <input type="text" placeholder="Location" name="location" id="box5"><br>
-        <input type="submit" value="Save" name="addSpace" id="box3">
-        <input type="submit" value="Cancel" id="box6">
+        <input type="submit" value="Save" name="addSpace" id="addBox1">
+        <input type="submit" value="Cancel" id="addBox2">
     </form>
 </body>
 
