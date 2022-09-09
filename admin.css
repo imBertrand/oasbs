@@ -7,6 +7,16 @@ h1{
     font-size: 22px;
     line-height: 27px;
     }
+
+    .heaading{
+    position: absolute;
+    width: 552px;
+    height: 27px;
+    font-weight: 700;
+    left: 10px;
+    font-size: 22px;
+    line-height: 27px;
+    }
     
     h3{
     position: absolute;

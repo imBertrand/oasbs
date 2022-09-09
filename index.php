@@ -22,6 +22,7 @@ $result->execute();
 </head>
 
 <body>
+    <h2 class="heading">Online Outdoor Advertising Space Booking System</h2>
     <h3 id="User">Available Outdoor Advertising Space</h3>
     <input type="submit" value="Report" id="userBox1">
     <table>
