@@ -12,6 +12,7 @@
     <h3 id="User">Available Outdoor Advertising Space</h3>
 
         <input type="submit" value="Report" id="userBox1">
+        <input type="submit" value="Log Out" id="userBox0">
 
 <table>
     <th>Region</th>

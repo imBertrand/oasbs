@@ -132,6 +132,18 @@ h1{
             line-height: 27px; 
         }
 
+        
+        #Box0{
+            position: absolute;
+            width: 100px;
+            height: 45px;
+            right: 10px;
+            top: 10px;
+            border: none;
+            background: #00203F;
+            border-radius: 10px;
+            color: white;
+        }
         #adminBox1{
             position: absolute;
             width: 100px;
@@ -167,6 +179,18 @@ h1{
     }
 
 #userBox1{
+    position: absolute;
+            width: 100px;
+            height: 45px;
+            top: 20px;
+            border: none;
+            background: #00203F;
+            border-radius: 10px;
+            color: white;
+            left: 50%;
+}
+
+#userBox0{
     position: absolute;
             width: 100px;
             height: 45px;
