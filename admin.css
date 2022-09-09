@@ -244,3 +244,27 @@ img{
     width: 40px;
     height: 40px;
 }
+
+#addBox1{
+    position: absolute;
+        width: 90px;
+        height: 45px;
+        right: 88%;
+        top: 250px;
+        border: none;
+        background: #00203F;
+        border-radius: 10px;
+        color: white;
+}
+
+#addBox2{
+    position: absolute;
+            width: 90px;
+            height: 45px;
+            right: 47%;
+            top: 250px;
+            border: none;
+            background:#E7E7E7;
+            border-radius: 10px;
+            color: black;
+}
