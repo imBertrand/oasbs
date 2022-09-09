@@ -14,7 +14,7 @@
 
  	//Login Function
  	//------------------------------------------
- 	if(isset($_POST['login'])){
+ 	if(isset($_POST['sign-in'])){
 		if($_POST['username'] != "" || $_POST['password'] != ""){
 
 
@@ -22,7 +22,7 @@
 			$password = $_POST['password'];
 
 
-			$sql = "SELECT * FROM `User` WHERE `username`=? AND `password`=? ";
+			$sql = "SELECT * FROM user WHERE `username`=? AND `password`=? ";
 			$query = $conn->prepare($sql);
 			$query->execute(array($username,$password));
 			$row = $query->rowCount();
@@ -42,7 +42,7 @@
 		}else{
 			echo "
 				<script>alert('Please complete the required field!')</script>
-				<script>window.location = 'index.php'</script>
+				<script>window.location = 'signin.php'</script>
 			";
 		}
 	}
@@ -55,7 +55,7 @@
 			$password = $_POST['password'];
 
 
-			$sql = "SELECT * FROM `Admin` WHERE `username`=? AND `password`=? ";
+			$sql = "SELECT * FROM `admin` WHERE `username`=? AND `password`=? ";
 			$query = $conn->prepare($sql);
 			$query->execute(array($username,$password));
 			$row = $query->rowCount();
@@ -81,18 +81,17 @@
 	//------------------------------------------------
 
 	//Register Function
-	if(ISSET($_POST['register'])){
-		if($_POST['firstname'] != "" || $_POST['lastname'] != "" || $_POST['username'] != "" || $_POST['password'] != ""){
+	if(ISSET($_POST['sign-up'])){
+		if($_POST['username'] != "" || $_POST['password'] != ""){
 			try{
-				$firstname = $_POST['firstname'];
-				$lastname = $_POST['lastname'];
+				
 				$username = $_POST['username'];
 				// md5 encrypted
 				// $password = md5($_POST['password']);
 				$password = $_POST['password'];
 
 				// $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				$sql = "INSERT INTO User VALUES(userId, '$firstname', '$lastname', '$username', '$password')";
+				$sql = "INSERT INTO user VALUES(userId,'$username', '$password')";
 				$insertion=$conn->prepare($sql);
 				$insertion->execute();
 
@@ -109,7 +108,7 @@
 		}else{
 			echo "
 				<script>alert('Please fill up the required field!')</script>
-				<script>window.location = 'pms.php'</script>
+				<script>window.location = 'signup.php'</script>
 			";
 		}
 	}
