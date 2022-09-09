@@ -135,7 +135,8 @@ if (isset($_GET['spaceId'])) {
                 
                 if ($query==true) {
                     echo "<script>alert('Space Booked')</script>";
-                
+                $query = $conn->prepare("DELETE from spaces WHERE spaceId=?");
+                $query->execute([$_GET['spaceId']]);
             
             }else{
             	echo "<script>alert('Please select space to')</script>
