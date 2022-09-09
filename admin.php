@@ -11,6 +11,7 @@
     <h1>Online Outdoor Advertising Space Booking  System</h1>
     <h3 id="Admin">Admin Home Page</h3>
 
+        <input type="submit" value="Log Out" id="Box0">
         <input type="submit" value="Add Space" id="adminBox1">
         <input type="submit" value="Update Space" id="adminBox2">
         <input type="submit" value="Delete Space" id="adminBox3">
