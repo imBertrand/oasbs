@@ -16,6 +16,7 @@
         <input type="text" placeholder="Username" name="username" id="box1"><br>
         <input type="text" placeholder="Password" name="password" id="box2"><br>
         <input type="submit" value="Sign Up" name="sign-up" id="box3">
+        <a href="adminSign.html">Sign in instead</a>
     </form>
 </body>
 

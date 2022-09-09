@@ -191,5 +191,22 @@ window.location = 'admin.php'
                 }
             }
 
- 
+ if (isset($_POST['UpdateSpace'])) {
+    global $conn;
+    $sql = "UPDATE spaces SET region = ?, city = ? ,location = ? where spaceId = ? ";
+    $result=$conn->prepare($sql); 
+    $result->execute([$_POST['region'],$_POST['city'],$_POST['location'],$_POST['spaceId']]); 
+
+        if ($result== true) {
+            echo "
+<script>
+alert('Space Detail Updated')
+</script>
+<script>
+window.location = 'admin.php'
+</script>
+";
+        }
+        
+}
 ?>

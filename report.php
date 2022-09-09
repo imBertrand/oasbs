@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'db.php';
 include 'major.php';
 
@@ -20,7 +20,7 @@ $result->execute();
 </head>
 
 <body>
-    <a href="index.html">
+    <a href="index.php">
         <h1 class="index">Online Outdoor Advertising Space Booking System</h1>
     </a>
     <h3 id="User">Booked Spaces Report</h3>

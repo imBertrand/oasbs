@@ -1,10 +1,12 @@
 <?php 
+
 include 'db.php';
 include 'major.php';
 
 $sql = "SELECT * from spaces";
 $result=$conn->prepare($sql);
 $result->execute();
+
 
 
 ?>
@@ -43,7 +45,10 @@ $result->execute();
         <?php } ?>
     </table>
     <a href="report.php"><input type="submit" value="Report" id="userBox1"></a>
+    <?php 
+    if (isset($_SESSION['username'])) { ?>
     <a href="out.php"><input type="button" value="Log Out" id="userBox0"></a>
+    <?php }?>
 </body>
 
 </html>
