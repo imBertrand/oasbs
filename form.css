@@ -61,14 +61,6 @@ border-radius: 10px;
     border-radius: 10px;
     color: white;
     }
-
-    a{
-        position: absolute;
-        top: 190px;
-        left: 35px;
-        color: #00203F;
-    }
-
     #signIn{
         position: absolute;
         width: 198px;
@@ -78,4 +70,18 @@ border-radius: 10px;
         font-weight: 700;
         font-size: 22px;
         line-height: 27px; 
+    }
+
+    a{
+        position: absolute;
+        top: 190px;
+        left: 35px;
+        color: #00203F;
+    }
+
+    .create{
+        position: absolute;
+        top: 220px;
+        left: 40px;
+        color: #00203F;
     }

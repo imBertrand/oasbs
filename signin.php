@@ -17,6 +17,7 @@
         <input type="password" placeholder="Password" name="password" id="box2"><br>
         <input type="submit" value="Sign In" name="sign-in" id="box3">
         <a href="adminSign.php">Sign In as Admin</a>
+        <a href="signup.php" class="create">Create Account</a>
     </form>
 </body>
 
