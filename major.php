@@ -146,16 +146,9 @@ if (isset($_GET['spaceId'])) {
         
 }
 
-	if (isset($_POST['delete'])) {
-		echo "Delete Working1";
-	}
-
-	if (isset($_POST['search'])) {
-		echo "Search Working1";
-	}
 
 	if (isset($_POST['addSpace'])) {
-    global $conn;
+   if($_POST['spaceId'] != "" || $_POST['region'] != ""|| $_POST['city'] != ""|| $_POST['location'] != ""){
     $sql = "INSERT INTO spaces values(?,?,?,?) ";
     $result=$conn->prepare($sql); 
     $result->execute([$_POST['spaceId'],$_POST['region'],$_POST['city'],$_POST['location']]); 
@@ -170,5 +163,33 @@ window.location = 'admin.php'
 </script>
 ";
         }
+    }else{
+    	 echo "
+<script>
+alert('Space Please Enter all details')
+</script>
+<script>
+window.location = 'addSpace.php'
+</script>
+";
     }
+}
+
+if (isset($_POST['delete'])) {
+                $query = $conn->prepare("DELETE from spaces WHERE spaceId=?");
+                $query->execute([$_POST['spaceId']]);
+
+                if ($query==true) {
+                    echo "
+<script>
+alert('Space Deleted')
+</script>
+<script>
+window.location = 'admin.php'
+</script>
+";
+                }
+            }
+
+ 
 ?>
