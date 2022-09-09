@@ -47,7 +47,7 @@
 		}
 	}
 		////Admin
-	if(isset($_POST['adminlogin'])){
+	if(isset($_POST['adminSign-in'])){
 		if($_POST['username'] != "" || $_POST['password'] != ""){
 
 
