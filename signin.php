@@ -14,9 +14,9 @@
     <h3 id="signIn">Sign In</h3>
     <form action="major.php" method="post">
         <input type="text" placeholder="Username" name="username" id="box1"><br>
-        <input type="text" placeholder="Password" name="password" id="box2"><br>
+        <input type="password" placeholder="Password" name="password" id="box2"><br>
         <input type="submit" value="Sign In" name="sign-in" id="box3">
-        <a href="adminSign.html">Sign In as Admin</a>
+        <a href="adminSign.php">Sign In as Admin</a>
     </form>
 </body>
 

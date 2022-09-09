@@ -13,7 +13,7 @@ include 'sessionCheck.php';
 </head>
 
 <body>
-    <a href="index.html">
+    <a href="index.php">
         <h1>Online Outdoor Advertising Space Booking System</h1>
     </a>
     <h3 id="update">Update Space</h3>
@@ -23,7 +23,7 @@ include 'sessionCheck.php';
         <input type="text" placeholder="City" name="city" id="box4"><br>
         <input type="text" placeholder="Location" name="location" id="box5"><br>
         <input type="submit" value="Save" name="UpdateSpace" id="addBox1">
-        <input type="submit" value="Cancel" id="addBox2">
+        <input type="button" value="Cancel" onclick="window.location = 'admin.php'" id="addBox2">
     </form>
 </body>
 

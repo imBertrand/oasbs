@@ -46,8 +46,12 @@ $result->execute();
     </table>
     <a href="report.php"><input type="submit" value="Report" id="userBox1"></a>
     <?php 
-    if (isset($_SESSION['username'])) { ?>
+    if (isset($_SESSION['username'])) { 
+
+        ?>
     <a href="out.php"><input type="button" value="Log Out" id="userBox0"></a>
+    <?php }else {?>
+    <a href="signin.php"><input type="button" value="Log In" id="userBox0"></a>
     <?php }?>
 </body>
 

@@ -68,7 +68,7 @@
 			} else{
 				echo "
 				<script>alert('Invalid username or password')</script>
-				<script>window.location = 'adminlogin.php'</script>
+				<script>window.location = 'adminSign.php'</script>
 				";
 			}
 		}else{
